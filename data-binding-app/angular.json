@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "material-app": {
+    "data-binding-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/material-app",
+            "outputPath": "dist/data-binding-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "material-app:build"
+            "browserTarget": "data-binding-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "material-app:build:production"
+              "browserTarget": "data-binding-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "material-app:build"
+            "browserTarget": "data-binding-app:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "material-app-e2e": {
+    "data-binding-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "material-app:serve"
+            "devServerTarget": "data-binding-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "material-app:serve:production"
+              "devServerTarget": "data-binding-app:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "material-app"
+  "defaultProject": "data-binding-app"
 }
