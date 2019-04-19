@@ -7,6 +7,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
@@ -27,7 +28,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
       MatCardModule,
       MatInputModule,
       MatProgressSpinnerModule,
-      MatSelectModule
+      MatSelectModule,
+      MatDividerModule
    ],
    providers: [],
    bootstrap: [

@@ -41,3 +41,17 @@
 
   </p>
 </section>
+<mat-divider></mat-divider>
+<section>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="First Name" (input)="inputEvent($event)" [value]="inputName">
+      </mat-form-field>
+      
+    </mat-card-content>
+    <mat-card-actions>
+      <p>Name: {{inputName}}</p>
+    </mat-card-actions>
+  </mat-card>
+</section>

@@ -6,18 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-binding.component.css']
 })
 export class EventBindingComponent implements OnInit {
-
   i = 0;
   buttonName = 'My Button';
   spinnerMode = 'determinate';
   btnEnabled = true;
   selectDisabled = false;
   selectedOption;
+  inputName = 'John';
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   save() {
     console.log('Click');
@@ -29,12 +27,12 @@ export class EventBindingComponent implements OnInit {
   }
 
   disabled() {
-  this.btnEnabled = false;
-  this.spinnerMode = 'indeterminate';
-  setTimeout(() => {
-    this.btnEnabled = true;
-    this.spinnerMode = 'determinate';
-  }, 3000);
+    this.btnEnabled = false;
+    this.spinnerMode = 'indeterminate';
+    setTimeout(() => {
+      this.btnEnabled = true;
+      this.spinnerMode = 'determinate';
+    }, 3000);
   }
 
   cbChange(event) {
@@ -47,4 +45,8 @@ export class EventBindingComponent implements OnInit {
     this.selectedOption = event.value;
   }
 
+  inputEvent(event) {
+    console.log(event.target.value);
+    this.inputName = event.target.value;
+  }
 }
