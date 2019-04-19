@@ -5,15 +5,18 @@ import { AppComponent } from './app.component';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       StringInterpolationComponent,
-      PropertyBindingComponent
+      PropertyBindingComponent,
+      EventBindingComponent
    ],
    imports: [
       BrowserModule,
@@ -21,7 +24,8 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
       MatButtonModule,
       MatCheckboxModule,
       MatCardModule,
-      MatInputModule
+      MatInputModule,
+      MatProgressSpinnerModule
    ],
    providers: [],
    bootstrap: [
