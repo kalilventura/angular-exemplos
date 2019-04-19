@@ -1,6 +1,9 @@
-<p>
-  Firstname: {{name}}
-</p>
-<p>
-  Lastname: {{lastname}}
-</p>
+<p>Name: {{name}}</p>
+<p>Lastname: {{lastname}}</p>
+<p>Age: {{age}}</p>
+
+<h1>My Clients</h1>
+<div *ngFor="let client of clients">
+  <app-client
+    [client]="client"></app-client>
+</div>
