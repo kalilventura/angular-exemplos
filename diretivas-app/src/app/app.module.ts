@@ -9,11 +9,13 @@ import {MatSelectModule} from '@angular/material/select';
 
 import { AppComponent } from './app.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
+import { NgClassComponent } from './ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,
