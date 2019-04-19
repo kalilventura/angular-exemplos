@@ -8,7 +8,11 @@ import {
   MatCheckboxModule,
   MatSelectModule,
   MatCardModule,
-  MatInputModule
+  MatInputModule,
+  MatListModule,
+  MatIconModule,
+  MatDividerModule,
+  MatButtonModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -16,6 +20,8 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { SubNgIfComponent } from './ng-if/sub-ng-if/sub-ng-if.component';
+import { NgForComponent } from './ng-for/ng-for.component';
+import { NgForFormComponent } from './ng-for-form/ng-for-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,9 @@ import { SubNgIfComponent } from './ng-if/sub-ng-if/sub-ng-if.component';
     NgStyleComponent,
     NgClassComponent,
     NgIfComponent,
-    SubNgIfComponent
+    SubNgIfComponent,
+    NgForComponent,
+    NgForFormComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,11 @@ import { SubNgIfComponent } from './ng-if/sub-ng-if/sub-ng-if.component';
     MatCardModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule,
+    MatIconModule,
+    MatDividerModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

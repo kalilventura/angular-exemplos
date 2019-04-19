@@ -14,5 +14,4 @@ export class NgIfComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

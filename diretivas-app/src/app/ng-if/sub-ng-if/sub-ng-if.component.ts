@@ -14,4 +14,7 @@ export class SubNgIfComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnDestroy() {
+    console.log('SubNgIfComponent - Destroy');
+  }
 }

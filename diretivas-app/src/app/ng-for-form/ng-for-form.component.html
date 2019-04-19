@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-content>
+    <section>
+      <mat-form-field class="form-field">
+        <input matInput placeholder="First Name" name="name" [(ngModel)]="name">
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <input matInput placeholder="Address" name="address" [(ngModel)]="address">
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <input matInput placeholder="Telephone" name="phone" [(ngModel)]="phone">
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-select placeholder="City" [(ngModel)]="city">
+          <mat-option *ngFor="let city of cities" [value]="city.name">
+            {{city.name}} - {{city.state}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <input matInput placeholder="Age" name="age" [(ngModel)]="age">
+      </mat-form-field>
+    </section>
+  </mat-card-content>
+  <mat-card-actions>
+    <section>
+      <button mat-raised-button color="primary" (onclick)="save()">Save</button>
+      <button mat-raised-button color="warn" (onclick)="cancel()">Cancel</button>
+    </section>
+  </mat-card-actions>
+</mat-card>
