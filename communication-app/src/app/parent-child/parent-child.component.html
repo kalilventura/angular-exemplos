@@ -5,3 +5,12 @@
 </div>
 <app-timer #stopWatch>
 </app-timer>
+<p #myP>Exemplo de ViewChild</p>
+<div>
+  <button mat-button color="primary" (click)="start()">Start</button>
+  <button mat-button color="accent" (click)="stop()">Stop</button>
+  <button mat-button color="warn" (click)="clear()">Clear</button>
+</div>
+
+<app-timer #stopWatch2>
+</app-timer>
