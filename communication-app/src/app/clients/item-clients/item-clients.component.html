@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-content>
+    <section *ngIf="onEdit">
+      <mat-form-field class="form-field">
+        <input matInput type="text" placeholder="First name" [(ngModel)]="name">
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <input matInput type="number" placeholder="Age" [(ngModel)]="age">
+      </mat-form-field>
+      <button mat-mini-fab color="primary" (click)="save()">Save</button>
+    </section>
+    <section *ngIf="!onEdit">
+      Name: {{client.name}}
+      Age: {{client.age}}
+      <button mat-icon-button color="primary" (click)="edit()">Edit</button>
+      <button mat-icon-button color="warn" (click)="remove()">Remove</button>
+    </section>
+  </mat-card-content>
+</mat-card>

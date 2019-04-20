@@ -4,7 +4,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatCardModule,
   MatButtonModule,
-  MatIconModule
+  MatIconModule,
+  MatInputModule,
+  MatFormFieldModule
  } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -12,6 +14,9 @@ import { InputBindingComponent } from './input-binding/input-binding.component';
 import { ClientComponent } from './input-binding/client/client.component';
 import { EventComponent } from './event/event.component';
 import { ChildItemComponent } from './event/child-item/child-item.component';
+import { ClientsComponent } from './clients/clients.component';
+import { FormsModule } from '@angular/forms';
+import { ItemClientsComponent } from './Clients/item-clients/item-clients.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +24,19 @@ import { ChildItemComponent } from './event/child-item/child-item.component';
     InputBindingComponent,
     ClientComponent,
     EventComponent,
-    ChildItemComponent
+    ChildItemComponent,
+    ClientsComponent,
+    ItemClientsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatButtonModule,
-    MatIconModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
