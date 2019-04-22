@@ -6,11 +6,13 @@ import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MainLifecycleComponent } from './main-lifecycle/main-lifecycle.component';
+import { LifeCycleChildComponent } from './main-lifecycle/life-cycle-child/life-cycle-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainLifecycleComponent
+    MainLifecycleComponent,
+    LifeCycleChildComponent
   ],
   imports: [
     BrowserModule,
