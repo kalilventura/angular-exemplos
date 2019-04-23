@@ -54,11 +54,13 @@ export class LifeCycleChildComponent implements OnInit, OnDestroy, OnChanges, Af
   // }
   }
 
+  // Esse metodo é chamado depois que a projeção é enviada pra o componente mais interno
   ngAfterContentInit() {
     console.log(this.name + ' afterInit');
     this.newEvent('afterInit');
   }
 
+  // Depois que toda a parte visual foi inicializada esse método será chamado
   ngAfterViewInit() {
     console.log(this.name + ' afterViewInit');
     this.newEvent('afterViewInit');

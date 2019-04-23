@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MainLifecycleComponent } from './main-lifecycle/main-lifecycle.component';
 import { LifeCycleChildComponent } from './main-lifecycle/life-cycle-child/life-cycle-child.component';
+import { ChildChildComponent } from './main-lifecycle/life-cycle-child/child-child/child-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLifecycleComponent,
-    LifeCycleChildComponent
+    LifeCycleChildComponent,
+    ChildChildComponent
   ],
   imports: [
     BrowserModule,
