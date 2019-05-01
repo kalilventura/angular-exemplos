@@ -37,4 +37,8 @@ export class ProductsService {
   // getProductNameString(id: string): Observable<string> {
   //   return this.http.get<Product>(`${this.url}/name/${id}`).pipe(map(p => p.name));
   // }
+
+  saveProduct(p: Product): Observable<Product> {
+    return this.http.post<Product>(`${this.url}products`, p);
+  }
 }

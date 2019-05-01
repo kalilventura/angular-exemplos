@@ -12,3 +12,7 @@ body { margin: 0;font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: pink;
     color: black;
 }
+
+mat-card {
+    margin: 20px; 
+}

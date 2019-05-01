@@ -17,7 +17,8 @@ export class AppComponent implements OnInit {
   productsErrorHandling: Product[];
   productsLoading: Product[];
   productsId: Product[];
-  bLoading: boolean = false;
+  newlyProducts: Product[];
+  bLoading = false;
   simpleProductsObserver: Observable<Product[]>;
 
   ngOnInit() {}
@@ -89,11 +90,25 @@ export class AppComponent implements OnInit {
 
   loadName(id: string) {
     this.productService.getProductName(id)
-    .subscribe(name => {
+    .subscribe((name => {
       const index = this.productsId.findIndex(p => p.id === id);
       if (index >= 0) {
         this.productsId[index].name = name;
       }
-    });
+    }));
   }
+
+  saveProduct(name: string, dep: string, price: number) {
+    const p = {name, department: dep, price};
+    this.productService.saveProduct(p).subscribe(
+      (p: Product) => {
+        console.log(p);
+        this.newlyProducts.push(p);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+
 }

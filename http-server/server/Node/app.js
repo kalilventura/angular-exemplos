@@ -86,4 +86,22 @@ app.get('/products/name/:id', function (req, res) {
         });
 });
 
+app.post('/products', function (req, res) {
+    p = new product({
+        name: req.body.name,
+        price: req.body.price,
+        department: req.body.department
+    });
+    p.save((err, prod) => {
+        if(err)
+            return res.status(500).send(err)
+        else
+            return res.status(201).send(prod);
+    })
+})
+
+app.delete('/products/:id', function (req, res) {
+    product.deleteOne({_id: req.params.id});
+})
+
 app.listen(3000);
