@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   ) {}
   productsErrorHandling: Product[];
   productsLoading: Product[];
+  productsId: Product[];
   bLoading: boolean = false;
   simpleProductsObserver: Observable<Product[]>;
 
@@ -27,16 +28,18 @@ export class AppComponent implements OnInit {
 
   getProductsWithErrorHandling() {
     this.productService.getProductsError().subscribe(
-      prods => { this.productsErrorHandling = prods; },
+      prods => {
+        this.productsErrorHandling = prods;
+      },
       err => {
         console.log(err);
         console.log('Message: ', err.error.msg);
         console.log('Status: ', err.status);
-        let config = new MatSnackBarConfig();
+        const config = new MatSnackBarConfig();
         config.duration = 2000;
         config.panelClass = ['snack_error'];
         if (err.status === 0) {
-        this.snackBar.open('Could not connect to the server', '', config);
+          this.snackBar.open('Could not connect to the server', '', config);
         } else {
           this.snackBar.open(err.error.msg, '', config);
         }
@@ -48,7 +51,7 @@ export class AppComponent implements OnInit {
     this.productService.getProductsDelay().subscribe(
       prods => {
         this.productsErrorHandling = prods;
-        let config = new MatSnackBarConfig();
+        const config = new MatSnackBarConfig();
         config.duration = 2000;
         config.panelClass = ['snack_ok'];
         this.snackBar.open('Product Success', '', config);
@@ -71,5 +74,26 @@ export class AppComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  getProductsId() {
+    this.productService.getProductsId().subscribe(ids => {
+      this.productsId = ids.map(id => ({
+        _id: id,
+        name: '',
+        department: '',
+        price: 0
+      }));
+    });
+  }
+
+  loadName(id: string) {
+    this.productService.getProductName(id)
+    .subscribe(name => {
+      const index = this.productsId.findIndex(p => p.id === id);
+      if (index >= 0) {
+        this.productsId[index].name = name;
+      }
+    });
   }
 }
