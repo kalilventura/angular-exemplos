@@ -101,7 +101,15 @@ app.post('/products', function (req, res) {
 })
 
 app.delete('/products/:id', function (req, res) {
-    product.deleteOne({_id: req.params.id});
+    const id = req.params.id;
+    product.deleteOne({_id: id}),
+    (err) => {
+        if(err) {
+            res.status(500).send(err);
+        }else {
+            res.status(200).send({});
+        }
+    }
 })
 
 app.listen(3000);

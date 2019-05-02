@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   productsLoading: Product[];
   productsId: Product[];
   newlyProducts: Product[];
+  productToDelete: Product[];
   bLoading = false;
   simpleProductsObserver: Observable<Product[]>;
 
@@ -104,6 +105,30 @@ export class AppComponent implements OnInit {
       (p: Product) => {
         console.log(p);
         this.newlyProducts.push(p);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+
+  loadProductsToDelete() {
+    this.productService.getProducts().subscribe(
+      (p) => {
+        this.productToDelete = p;
+      }
+    );
+  }
+
+  deleteProduct(p: Product) {
+    console.log('Delete ',p);
+    this.productService.deleteProduct(p)
+    .subscribe(
+      (res) => {
+        const index = this.productToDelete.findIndex(prod => p.id === prod.id);
+        if (index >= 0) {
+          this.productToDelete.splice(index, 1);
+        }
       },
       (err) => {
         console.log(err);
