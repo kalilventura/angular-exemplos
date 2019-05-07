@@ -118,7 +118,7 @@
                 </mat-error>
             </mat-form-field>
           </div>
-          <button mat-button color="primary" type="submit">
+          <button mat-button color="primary" type="submit" [disabled]="!formClient.valid">
             <mat-icon>done</mat-icon>Submit
           </button>
         </form>
