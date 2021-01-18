@@ -17,8 +17,8 @@ import { AuthInterceptor } from './auth.interceptor';
     ReactiveFormsModule
   ]
 })
-export class AuthModule {
 
+export class AuthModule {
   // Quando queremos adicionar o interceptor no modulo
   static forRoot(): ModuleWithProviders {
     return {
@@ -28,5 +28,4 @@ export class AuthModule {
       ]
     };
   }
-
 }
