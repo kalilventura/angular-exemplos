@@ -100,19 +100,19 @@
     "@angular-devkit/core" "7.3.8"
     rxjs "6.3.3"
 
-"@angular/animations@^7.2.13":
-  version "7.2.13"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-7.2.13.tgz#9a49482ea2e0386a691d5b9d7be422251b66d767"
-  integrity sha512-Z0g0DthJnxTZ0dUc5BlojMq/0XIikhWzTqq0ym8w3G6jqBJD0OJ0jRCIfV0Leqlgzq6Jzvdrx0/JngBiKi5+uA==
+"@angular/animations@github:angular/animations-builds":
+  version "12.0.0-next.8+364.sha-e29eb8a"
+  uid db8561961cd22c74edf90e0cbfe1b80a65f2b97b
+  resolved "https://codeload.github.com/angular/animations-builds/tar.gz/db8561961cd22c74edf90e0cbfe1b80a65f2b97b"
   dependencies:
-    tslib "^1.9.0"
+    tslib "^2.1.0"
 
-"@angular/cdk@^7.3.7":
-  version "7.3.7"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.3.7.tgz#ce1ad53ba04beb9c8e950acc5691ea0143753764"
-  integrity sha512-xbXxhHHKGkVuW6K7pzPmvpJXIwpl0ykBnvA2g+/7Sgy5Pd35wCC+UtHD9RYczDM/mkygNxMQtagyCErwFnDtQA==
+"@angular/cdk@github:angular/cdk-builds":
+  version "12.1.0-next.0-sha-2646ce96f"
+  uid ce13348c502e692a3b85c0607f98332802347b38
+  resolved "https://codeload.github.com/angular/cdk-builds/tar.gz/ce13348c502e692a3b85c0607f98332802347b38"
   dependencies:
-    tslib "^1.7.1"
+    tslib "^2.1.0"
   optionalDependencies:
     parse5 "^5.0.0"
 
@@ -185,12 +185,12 @@
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-7.2.13.tgz#941cb098657efdbc386ef8e54d2d893497f68c20"
   integrity sha512-1bNWJpwH9wB0JybkbjdQp9J4bGmGxJX6BG7Mz3188Wc4J+aNy696Gc6IaJs7tFK8VXAdJrTJ5jGr9Oiu+ATe8w==
 
-"@angular/material@^7.3.7":
-  version "7.3.7"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.3.7.tgz#dcd95e6618ba6254c5880efee1aad349cf5b9140"
-  integrity sha512-Eq+7frkeNGkLOfEtmkmJgR+AgoWajOipXZWWfCSamNfpCcPof82DwvGOpAmgGni9FuN2XFQdqP5MoaffQzIvUA==
+"@angular/material@github:angular/material2-builds":
+  version "12.1.0-next.0-sha-2646ce96f"
+  uid fe8be45784ce7adc961d3364a694106a564dc81c
+  resolved "https://codeload.github.com/angular/material2-builds/tar.gz/fe8be45784ce7adc961d3364a694106a564dc81c"
   dependencies:
-    tslib "^1.7.1"
+    tslib "^2.1.0"
 
 "@angular/platform-browser-dynamic@~7.2.0":
   version "7.2.13"
@@ -2924,6 +2924,11 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
 
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+  integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
+
 handle-thing@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-2.0.0.tgz#0e039695ff50c93fc288557d696f3c1dc6776754"
@@ -5338,10 +5343,10 @@ querystring@0.2.0:
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
   integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
 
-querystringify@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
-  integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
+querystringify@^2.1.1:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+  integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
@@ -6684,10 +6689,15 @@ ts-node@~7.0.0:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+
+tslib@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
+  integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
 
 tslint@~5.11.0:
   version "5.11.0"
@@ -6817,11 +6827,11 @@ urix@^0.1.0:
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
 url-parse@^1.4.3:
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.6.tgz#baf91d6e6783c8a795eb476892ffef2737fc0456"
-  integrity sha512-/B8AD9iQ01seoXmXf9z/MjLZQIdOoYl/+gvsQF6+mpnxaTfG9P7srYaiqaDMyKkR36XMXfhqSHss5MyFAO8lew==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.1.tgz#d5fa9890af8a5e1f274a2c98376510f6425f6e3b"
+  integrity sha512-HOfCOUJt7iSYzEx/UqgtwKRMC6EU91NFhsCHMv9oM03VJcVo2Qrp8T8kI9D7amFf1cu+/3CEhgb3rF9zL7k85Q==
   dependencies:
-    querystringify "^2.0.0"
+    querystringify "^2.1.1"
     requires-port "^1.0.0"
 
 url@^0.11.0:
